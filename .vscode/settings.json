@@ -1,5 +1,8 @@
 {
     "editor.suggestOnTriggerCharacters": false,
     "editor.inlineSuggest.suppressSuggestions": true,
-    "editor.inlineSuggest.showToolbar": "always"
+    "editor.inlineSuggest.showToolbar": "always",
+    "application.experimental.rendererProfiling": true,
+    "dart.enableCompletionCommitCharacters": true,
+    "dart.flutterCustomEmulators": []
 }
