@@ -1,5 +1,16 @@
-{
-    "editor.suggestOnTriggerCharacters": false,
-    "editor.inlineSuggest.suppressSuggestions": true,
-    "editor.inlineSuggest.showToolbar": "always"
+{   
+  "dart.flutterSdkPath": ".fvm/flutter_sdk",
+  "dart.flutterSdkPaths": ["/Users/usr/fvm/versions"],
+  // Remove .fvm files from search
+  "search.exclude": {
+    "**/.fvm": true
+  },
+  // Remove from file watching
+  "files.watcherExclude": {
+    "**/.fvm": true
+  },
+  // ... other settings,
+  "editor.suggestOnTriggerCharacters": false,
+  "editor.inlineSuggest.suppressSuggestions": true,
+  "editor.inlineSuggest.showToolbar": "always",
 }
