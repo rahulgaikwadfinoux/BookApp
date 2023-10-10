@@ -5,21 +5,29 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "bookapp",
-            "request": "launch",
-            "type": "dart"
-        },
-        {
-            "name": "bookapp (profile mode)",
+            "name": "bookapp (debug mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "profile"
+            "program": "./lib/main_devlopment.dart"
+        },
+        {
+            "name": "bookapp (devlopment mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "./lib/main_devlopment.dart"            
+        },
+        {
+            "name": "bookapp (uat mode)",
+            "request": "launch",
+            "type": "dart",
+            "program": "./lib/main_uat.dart"
         },
         {
             "name": "bookapp (release mode)",
             "request": "launch",
             "type": "dart",
-            "flutterMode": "release"
+            "flutterMode": "release",
+            "program": "./lib/main_releaase.dart"
         }
     ]
 }
