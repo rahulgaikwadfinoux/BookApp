@@ -6,6 +6,8 @@ import 'package:bookapp/theme/color_schemes.dart';
 import 'package:bookapp/theme/contrast_provider.dart';
 import 'package:bookapp/theme/theme_provider.dart';
 
+import '../utils/dimensions.dart';
+
 class BookAppTheme {
   const BookAppTheme._();
 
@@ -74,9 +76,19 @@ class BookAppTheme {
         foregroundColor: myColorScheme.onBackground,
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),
-      dividerColor: const Color(0xFFdfdfdf),
+      dividerColor: myColorScheme.onSecondary,
+      buttonTheme: ButtonThemeData(
+          buttonColor: myColorScheme.primary,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(radiusHuge))),
       inputDecorationTheme: InputDecorationTheme(
         fillColor: myColorScheme.secondary,
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(radiusHuge),
+        ),
+        enabledBorder: OutlineInputBorder(
+            borderRadius: BorderRadius.circular(radiusHuge),
+            borderSide: BorderSide(color: myColorScheme.onBackground)),
       ),
       iconTheme: IconThemeData(
         color: myColorScheme.onBackground,
@@ -205,7 +217,6 @@ class BookAppTheme {
     return MaterialColor(color.value, colorShades);
   }
 
-  //From: https://stackoverflow.com/a/58604669/13313941
   static Color getShade(Color color, {bool darker = false, double value = .1}) {
     assert(value >= 0 && value <= 1);
 

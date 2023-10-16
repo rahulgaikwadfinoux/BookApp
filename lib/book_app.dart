@@ -1,16 +1,23 @@
 import 'dart:ui';
 
 import 'package:bookapp/constants/debug_mode.dart';
+import 'package:bookapp/constants/route_constatnts.dart';
 import 'package:bookapp/homepage.dart';
+import 'package:bookapp/layouts/login_layout/login_layout.dart';
+import 'package:bookapp/layouts/signup_layout/signin_layout.dart';
 import 'package:bookapp/preferences/user_preferences.dart';
+import 'package:bookapp/routes/routes.dart';
 import 'package:bookapp/theme/bookapp_theme.dart';
 import 'package:bookapp/theme/color_provider.dart';
 import 'package:bookapp/theme/contrast_provider.dart';
 import 'package:bookapp/theme/theme_provider.dart';
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:provider/provider.dart';
 import 'package:provider/single_child_widget.dart';
+
+import 'utils/custom_plugins.dart';
 
 class BookApp extends StatefulWidget {
   final BookAppModeEnum mymode;
@@ -99,14 +106,37 @@ class _BookAppState extends State<BookApp> {
 
     return MaterialApp(
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: BookAppTheme.getThemeData(
           Brightness.light, themeProvider, colorProvider, textContrastProvider),
       darkTheme: BookAppTheme.getThemeData(
           Brightness.dark, themeProvider, colorProvider, textContrastProvider),
       themeMode: themeProvider.currentThemeMode,
-      home: HomePage(),
+      home: const SafeArea(child: SignupLayout()),
+      initialRoute: login_route,
+      routes: Routes.routes,
+      // onGenerateRoute: Routes.onGeneratedRoute,
+      // onGenerateInitialRoutes: ,
     );
   }
+
+  // Widget runRouteApp(Widget wid, ){
+
+  // }
+
+  // Widget buildPreview() {
+  //   return (widget.mymode == BookAppModeEnum.debug ||
+  //           widget.mymode == BookAppModeEnum.devlopment)
+  //       ? DevicePreview(
+  //           enabled: true,
+  //           tools: const [
+  //             ...DevicePreview.defaultTools,
+  //             CustomPlugin(),
+  //           ],
+  //           builder: (context) => const HomePage(),
+  //         )
+  //       : const HomePage();
+  // }
 
   Widget _buildError(AsyncSnapshot<void> snapshot) {
     return MaterialApp(

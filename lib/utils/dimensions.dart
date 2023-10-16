@@ -21,6 +21,7 @@ const double radiusMedium = 6;
 const double radiusNormal = 8;
 const double radiusLarge = 10;
 const double radiusExtraLarge = 12;
+const double radiusHuge = 16;
 
 /// use for padding
 const double paddingExtraSmall = 2;
@@ -29,6 +30,7 @@ const double paddingMedium = 6;
 const double paddingNormal = 8;
 const double paddingLarge = 10;
 const double paddingExtraLarge = 12;
+const double paddingHuge = 16;
 
 /// use for margin
 const double marginExtraSmall = 2;
