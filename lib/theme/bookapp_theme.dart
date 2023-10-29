@@ -42,6 +42,10 @@ class BookAppTheme {
     return ThemeData(
       primaryColor: const Color(0xFF341100),
       colorScheme: myColorScheme,
+      drawerTheme: DrawerThemeData(
+        backgroundColor: myColorScheme.secondaryContainer,
+        scrimColor: Colors.transparent,
+      ),
       canvasColor: themeProvider.currentTheme == THEME_AMOLED
           ? myColorScheme.background
           : null,
@@ -73,6 +77,7 @@ class BookAppTheme {
           : _TEXT_THEME,
       appBarTheme: AppBarTheme(
         color: myColorScheme.background,
+        elevation: 0,
         foregroundColor: myColorScheme.onBackground,
         systemOverlayStyle: SystemUiOverlayStyle.light,
       ),

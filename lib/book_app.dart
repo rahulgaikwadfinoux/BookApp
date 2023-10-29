@@ -112,7 +112,7 @@ class _BookAppState extends State<BookApp> {
       darkTheme: BookAppTheme.getThemeData(
           Brightness.dark, themeProvider, colorProvider, textContrastProvider),
       themeMode: themeProvider.currentThemeMode,
-      home: const SafeArea(child: SignupLayout()),
+      // home: const SafeArea(child: SignupLayout()),
       initialRoute: login_route,
       routes: Routes.routes,
       // onGenerateRoute: Routes.onGeneratedRoute,
